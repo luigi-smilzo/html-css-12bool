@@ -1,0 +1,82 @@
+/* General rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 100px;
+}
+
+/* Piano */
+#piano .white {
+  position: relative;
+  height: 80px;
+  border: 1px solid black;
+}
+
+#piano .black {
+  position: absolute;
+  top: calc(50% + 20px);
+  right: 0;
+  background-color: black;
+  height: 40px;
+}
+
+#piano span.note {
+  padding-left: 50px;
+  font-family: serif;
+  font-size: 34px;
+  line-height: 80px;
+  color: black;
+}
+
+#piano span.sharp {
+  position: relative;
+  bottom: 3px;
+  z-index: 1;
+  padding-left: 25px;
+  font-family: serif;
+  font-size: 24px;
+  line-height: 0px;
+  color: white;
+}
+
+/* Scales */
+.c-maj,
+.c-min {
+  border: 3px solid black;
+  line-height: 80px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#scales {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+#scales img {
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 100%;
+}
+
+/* Hover */
+div.c-maj > h2:last-child,
+div.c-min > h2:last-child,
+div.c-maj:hover > h2:first-child,
+div.c-min:hover > h2:first-child {
+  display: none;
+}
+
+div.c-maj:hover > h2:last-child {
+  display: block;
+  color: red;
+}
+
+div.c-min:hover > h2:last-child {
+  display: block;
+  color: blue;
+}
